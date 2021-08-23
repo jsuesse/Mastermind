@@ -11,30 +11,6 @@ import java.util.concurrent.TimeUnit;
 public class GameUtil {
     private static final HashMap<Long, Mastermind> games = new HashMap<>();
 
-    //    public static void setGame(long userId, Game game) {
-    //        games.put(userId, game);
-    //    }
-    //
-    //    public static boolean hasGame(long userId) {
-    //        return games.containsKey(userId);
-    //    }
-    //
-    //    public static Game getGame(long userId) {
-    //        return games.get(userId);
-    //    }
-    //
-    //    public static void removeGame(long userId) {
-    //        games.remove(userId);
-    //    }
-    //sendGameEmbed
-    //String desc= Wähle mit den Reaktionen deine x.te Farbe \n <- löscht den letzten Knubbel, << setzt den Guess komplett zurück
-    // <> startet das Spiel neu
-    //X beendet das Spiel
-    //firstfield/secondfield =:blue_circle: :yellow_circle: :green_circle: :white_circle: \n \n " +
-    //                            ":yellow_circle: :green_circle: :white_circle: :red_circle: \n\n" +
-    //                            ":o: :o: :o: :o:"
-    //etc
-    //onMessageReactionAdd(); schreiben?
     public static void setGame(long userId, Mastermind game) {
         games.put(userId, game);
     }

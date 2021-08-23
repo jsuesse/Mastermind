@@ -1,6 +1,5 @@
 package core;
 
-
 import listener.*;/*
 import listener.VoiceMoveListener;*/
 
@@ -71,8 +70,6 @@ public class BOT {
         consoleThread.setDaemon(true);
         consoleThread.setName("Console Thread");
         consoleThread.start();
-
-
 
     }
 

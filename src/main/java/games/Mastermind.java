@@ -8,9 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 
 public class Mastermind {
-    //member:
-    //private
-    //private:
+
     long gameMessageID;
     long channelID;
     public boolean gameActive = false;
@@ -45,7 +43,7 @@ public class Mastermind {
     }
 
     public void generateinitialfields() {
-    //yadda CONTINUE HERE
+    //TODO
         knownfirstfield=knownsecondfield=" ";
         unknownfirstfield=":o: :o: :o: :o: \n\n";
         for (int i=0;i<6;i++) unknownfirstfield += ":o: :o: :o: :o: \n\n";
@@ -148,11 +146,11 @@ public class Mastermind {
 
 
     public void modifyfirstfields() {
-// check initializing of fields CONTINUE HERE
+// check initializing of fields TODO
 
         String discordcolor=determinediscordcolorfromcolor(guesslist[guesscounter].getcolorlistatindex(colorcounter));
         knownfirstfield+=discordcolor;
-        unknownfirstfield=unknownfirstfield.replaceFirst(":o:",""); //DID THAT HAPPEN? CONTINUE HERE
+        unknownfirstfield=unknownfirstfield.replaceFirst(":o:",""); //DID THAT HAPPEN? TODO
         mergefields();
     }
     public void modifysecondfields() {
@@ -208,15 +206,11 @@ public class Mastermind {
         }
     }
 
-
-
     public void  rewindactions(){
         while (colorcounter>0){
             backactions();
         }
     }
-
-
 
     public void run(Guild guild, TextChannel channel, String userInput) {
         if (userInput.equals("stop") && gameActive) {
@@ -293,8 +287,8 @@ public class Mastermind {
         }
     }
 
-        //CONTINUE HERE
-        // außerdem muss der DESC Text geändert werden, sowie der Guess angezeigt werden
+        //TODO
+        //außerdem muss der DESC Text geändert werden, sowie der Guess angezeigt werden
         //optional: Check-mark nach 4 farben als zusätzliche Bestätigung
 
     public void mergefields (){
@@ -348,64 +342,3 @@ public class Mastermind {
     }
 
 }
-
- /*   --- DEPRECATED ---
-     public void mainmethod(TextChannel channel, String message) {
-        generateguess(message);
-        output(channel);
-    }
-
-
-    public void generateguess(String message){
-        //Substring split
-        String[] color;
-        color = message.split(" ");
-        System.out.println(color);
-        guesslist[guesscounter]=currentguess=new Guess(color[0],color[1],color[2],color[3]);
-        guesscounter++;
-    }
-
-    public void output(TextChannel channel){ //DEPRECATED
-        channel.sendMessage("H Hits").queue();
-        channel.sendMessage("C Crits").queue();
-        channel.sendMessage("G UE S S H C").queue();
-        String[] lines=new String[7]; //als member spart man sich viel!
-        String tmp;
-        tmp="";
-
-
-        for (int i=0;i<guesscounter;i++){
-            for (int j=0;j<4;j++){
-             //   tmp=tmp+guesslist[i][j].getcolorlistatindex(j)+" "; BUGGED
-            }
-            tmp=tmp+" "+ ((hitlist[i]))+" "+(critlist[i]);
-            lines[i]=tmp;
-            tmp="";
-        }
-
-        for (int x=0;x<7;x++){//ausgabe
-            channel.sendMessage(lines[x]).queue();
-          //  wait(50); BUGGED
-        }
-        channel.sendMessage("                     ").queue();
-        channel.sendMessage("? ? ? ?").queue();
-
-        //break;
-
-H HITS
-C CRITS
-G UE S S H C
-R G B P  1 2
-R G B P  1 2
-O O O O  - -
-O O O O  - -
-O O O O  - -
-O O O O  - -
-O O O O  - -
-
-? ? ? ?
-
-
-
-
-  */
