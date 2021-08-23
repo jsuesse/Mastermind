@@ -23,8 +23,6 @@ import java.io.InputStreamReader;
 public class BOT {
 
     private static JDA shardManager;
-    private JDABuilder builder;
-
     public static void main(String[] args) throws LoginException {
         String token = null;
         try {
@@ -51,32 +49,19 @@ public class BOT {
             ex.printStackTrace();
         }
         if (token == null) return;
+        try {
+            JDABuilder builder;
+            builder = JDABuilder.createDefault(token);
+            builder.setActivity(Activity.watching("beep boop"));
+            builder.setStatus(OnlineStatus.ONLINE);
+            builder.addEventListeners(new CommandListener(), new GameListener());
 
-        builder=JDABuilder.createDefault(token);
-        builder.setActivity(Activity.watching("beep boop"));
-        builder.setStatus(OnlineStatus.ONLINE);
-
-        builder.addEventListeners(new CommandListener(), new GameListener());
-        /*
-        builder.addEventListeners(new VoiceJoinListener());
-        builder.addEventListeners(new VoiceLeaveListener());
-        builder.addEventListeners(new VoiceMoveListener());*/
-
-        shardManager = builder.build();
-        System.out.println("Bot online!");
-
-        Thread consoleThread = new Thread(() -> {
-            Scanner s = new Scanner(System.in);
-            while (s.hasNextLine()) {
-                processCommand(s.nextLine());
-            }
-        });
-        consoleThread.setDaemon(true);
-        consoleThread.setName("Console Thread");
-        consoleThread.start();
-
+            shardManager = builder.build();
+            System.out.println("Bot online!");
+        } catch (LoginException e) {
+            e.printStackTrace();
+        }
     }
-
     public static JDA getShardManager() {
         return shardManager;
     }
@@ -91,7 +76,7 @@ public class BOT {
 
                     if(line.equalsIgnoreCase("exit")){
                         if(shardManager != null){
-                            builder.setStatus(OnlineStatus.OFFLINE);
+                            //builder.setStatus(OnlineStatus.OFFLINE);
                             shardManager.shutdown();
                             System.out.println("Bot offline *knürtsch*");
                         }
@@ -107,5 +92,4 @@ public class BOT {
 
         }).start();
     }
-
 }
