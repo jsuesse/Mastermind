@@ -8,7 +8,11 @@ Beware of Spaghetti !!
 
 ## What is this?
 
-Following...
+Implementation of a discord Bot for this game: https://en.wikipedia.org/wiki/Mastermind_(board_game)
+
+## Contributing and Issues
+
+Do not contribute, yet, do not create Issues.
 
 ## License
 
