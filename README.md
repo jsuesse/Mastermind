@@ -10,6 +10,22 @@ Beware of Spaghetti !!
 
 Implementation of a discord Bot for this game: https://en.wikipedia.org/wiki/Mastermind_(board_game)
 
+## Usage
+
+Clone the repo, create and replace the discord token with the according permissions to send, read and delete messages (google it) etc.
+
+Commands:
+
+To play mastermind write:
+
+> !t mastermind play
+
+The bot will delete your message, don't be afraid
+
+Gimmick:
+
+> !t coinflip
+
 ![image](https://user-images.githubusercontent.com/26322754/130513442-73703a8f-67a8-4a5b-87ec-18c2055cdfdf.png)
 
 
@@ -19,6 +35,6 @@ Do not contribute, yet, do not create Issues.
 
 ## License
 
-GPLv3 
- 
-inspired by and based on https://github.com/PolyMarsDev/Sokobot/ 
+GPLv3
+
+inspired by and based on https://github.com/PolyMarsDev/Sokobot/
