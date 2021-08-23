@@ -1,5 +1,5 @@
 Warning!  I made this project a while ago, just dumped it here for now.
-Code might not work (yet), because there are untested changes.
+There are untested changes, but it seems to work so far.
 Cleaning up later or maybe never.
 
 Beware of Spaghetti !!
@@ -9,6 +9,9 @@ Beware of Spaghetti !!
 ## What is this?
 
 Implementation of a discord Bot for this game: https://en.wikipedia.org/wiki/Mastermind_(board_game)
+
+![image](https://user-images.githubusercontent.com/26322754/130513442-73703a8f-67a8-4a5b-87ec-18c2055cdfdf.png)
+
 
 ## Contributing and Issues
 
