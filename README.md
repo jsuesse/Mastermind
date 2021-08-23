@@ -12,7 +12,9 @@ Implementation of a discord Bot for this game: https://en.wikipedia.org/wiki/Mas
 
 ## Usage
 
-Clone the repo, create and replace the discord token with the according permissions to send, read and delete messages (google it) etc.
+- Clone the repo
+-  create and replace the discord token with the according permissions to send, read and delete messages (google it) etc.
+- Run the Bot on local
 
 Commands:
 
